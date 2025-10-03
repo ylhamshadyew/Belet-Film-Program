@@ -1,4 +1,4 @@
-# Belet Film App
+# Belet Film Program
 
 ![Electron](https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)
 ![Cross-Platform](https://img.shields.io/badge/Cross--Platform-✓-green?style=for-the-badge)
