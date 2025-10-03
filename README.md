@@ -26,3 +26,24 @@
 ```bash
 git clone https://github.com/yourusername/belet-film-app.git
 cd belet-film-app
+```
+
+2. **Установите зависимости**
+```bash
+npm install
+```
+или, если используете yarn:
+```bash
+yarn install
+```
+
+3. **Запуск приложения**
+```bash
+npm start
+```
+или, если используете yarn:
+```bash
+yarn start
+```
+
+После запуска приложение откроется в отдельном окне с сайтом **film.belet.tm** .
