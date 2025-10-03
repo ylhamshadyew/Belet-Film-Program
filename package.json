@@ -1,0 +1,54 @@
+{
+  "name": "belet-film-app",
+  "version": "1.0.0",
+  "description": "Belet Film - Сервис для просмотра фильмов и сериалов.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "Jan Tehnologiýa HJ, sn1ke",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^30.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.belet.film",
+    "productName": "Belet Film",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/.*",
+      "!**/*.map"
+    ],
+    "asar": true,
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64", "ia32"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "linux": {
+      "icon": "icon.png",
+      "target": ["AppImage", "deb", "rpm"],
+      "category": "Video"
+    },
+    "mac": {
+      "icon": "icon.icns",
+      "category": "public.app-category.entertainment"
+    }
+  }
+}
