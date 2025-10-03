@@ -55,3 +55,37 @@ yarn start
 npm run dist
 ```
 * В папке dist/ появится .exe установщик или распакованная версия **(win-unpacked).**
+
+**Linux**
+* Используйте **Linux** напрямую или *WSL2* на **Windows**.
+* Установите необходимые пакеты:
+```bash
+sudo apt update
+sudo apt install -y nodejs npm ruby ruby-dev build-essential
+sudo gem install --no-document fpm
+```
+
+* Соберите приложение:
+```bash
+npm run dist
+```
+* В папке dist/ появятся .AppImage, .deb и .rpm
+
+**macOS**
+* Сборка требует **macOS** для создания .dmg или .pkg
+```bash
+npm run dist
+```
+* Результат будет в папке dist/
+
+## 🎨 Кастомизация интерфейса
+* Через preload.js можно изменять стили сайта только в твоём приложении, оригинальный сайт остаётся без изменений (опционально):
+```bash
+// preload.js
+window.addEventListener('DOMContentLoaded', () => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'custom-style.css';
+    document.head.appendChild(link);
+});
+```
